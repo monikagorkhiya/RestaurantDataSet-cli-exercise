@@ -9,7 +9,7 @@ Dataset we are using is from from this below CSV
 
 - Git Clone
 ```
-$ git clone  https://github.com/monikagorkhiya/RestaurantDataSet-cli-exercise.git
+$ git clone  git@github.com:monikagorkhiya/RestaurantDataSet-cli-exercise.git
 ```
 
 - Install npm
