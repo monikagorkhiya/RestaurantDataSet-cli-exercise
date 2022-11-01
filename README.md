@@ -4,6 +4,7 @@ We have a restaurant dataset for this exercise, and you have to do some tasks on
  
 Dataset we are using is from from this below CSV
 
+./assets/restaurant.csv
 
 ## SETUP
 
