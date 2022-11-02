@@ -21,8 +21,7 @@ const read_csv = function(csvPath){
       reject(error)
     })
     .on("end", function () {
-        console.log("parsed csv data:");
-        dataSet=data;
+        // console.log("parsed csv data:");
         resolve(data)
     });
   })

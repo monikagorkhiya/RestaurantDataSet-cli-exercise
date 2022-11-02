@@ -1,1 +1,10 @@
 package-lock.json
+package.json
+node_modules
+
+assets/restaurant copy.csv
+
+highestRatings.js
+surveyCountries.js
+topRatedCuisines.js
+test.js
