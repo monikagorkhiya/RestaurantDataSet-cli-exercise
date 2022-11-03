@@ -1,8 +1,8 @@
-const fileTasks = require("./modules/readCSV.js")
+const fileReadCSV = require("./modules/readCSV.js")
 
 const cuisine = process.argv[2]
 
-fileTasks.read_csv("assets/restaurant.csv")
+fileReadCSV.read_csv("assets/restaurant.csv")
 .then(dataSet=>{
     cuisineFilter(dataSet, cuisine)
 })
