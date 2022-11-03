@@ -1,15 +1,10 @@
-const fileTasks = require("./modules/readCSV.js")
+const tasksFile = require("./modules/readCSV.js")
+const filePrintData = require("./modules/printData.js")
+const fileLocationFilter = require('./modules/locationFilter.js')
 const city = process.argv[2]
 
-fileTasks.read_csv("assets/restaurant.csv")
+tasksFile.read_csv("assets/restaurant.csv")
 .then((data)=>{
-    locationFilter(data, city);
-})
-
-function locationFilter(dataSet, city){
-    dataSet.forEach(row => {
-        if (row.City.includes(city)){
-            console.log(row['Restaurant Name']);
-        }
-    });
-}
+    return fileLocationFilter.locationFilter(data, city);
+})//displaying data using function from ./modules/prinData.js
+.then(filteredData=>filePrintData.printData(filteredData));
