@@ -23,7 +23,6 @@ function segregateRatings(filteredData){//function to count segregate ratings
             segregateObject.excellent++;
         }
     });
-    console.log(segregateObject)
     return segregateObject
 }
 
