@@ -8,9 +8,6 @@ const upperLimit = parseFloat(arr[1]);
 
 const sortingOrder = process.argv[3];
 
-console.log(lowerLimit)
-console.log(upperLimit)
-
 fileTasks.read_csv("assets/restaurant.csv")
 .then(dataSet=>{
     return priceRangeFilter(dataSet, lowerLimit, upperLimit);
@@ -37,17 +34,13 @@ function priceRangeFilter(dataSet, lowerLimit, upperLimit){
 
 //function to print restaurants low to high OR high to low as per their pricing
 function printByOrder(filteredData, sortingOrder){
-    let count=0;
     if (sortingOrder==='low-high'){
         for(i=filteredData.length-1; i>=0; i--){
             console.log(filteredData[i]['Restaurant Name'])
-            count++;
         }
     }else if(sortingOrder==='high-low'){
         for(i=0; i<filteredData.length; i++){
             console.log(filteredData[i]['Restaurant Name'])
-            count++
         }
     }
-    console.log("count: ", count)
 }
